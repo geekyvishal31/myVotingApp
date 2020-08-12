@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+body{
+  margin:0;
+  /* background-image: url("#");
+  background-attachment: fixed; */
+}
+*{
+  box-sizing: border-box;
+}
+
+.custom-box{
+  max-width: 750px;
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 50px 40px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+.btn{
+  background-color: #ff8b00;
+  border: 2px solid #b96502;
+  padding: 14px 40px;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0 10px;
+}
+.btn:focus{
+  outline: none;
+}
+.btn:hover
+{
+  color: #054158;
+}
+
+.poll-box{
+  background-color: #eaebb7;
+}
+.poll-box .stats{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 30px;
+}
+.poll-box .stats .vote-count{
+  flex-basis: calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  /* background-color: red; */
+  text-align: left;
+}
+.poll-box .stats .posted-by{
+  flex-basis: calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  /* background-color: blue; */
+  text-align: right;
+}
+.poll-box .stats .vote-count .count{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  color: #059e4c;
+  border: 2px solid #059e4c;
+  font-weight: 800;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.poll-box .stats .posted-by .author-name{
+  font-weight: 800
+}
+.poll-box .question-box{
+  background-color: #ffffff;
+  padding: 40px 30px;
+  margin-top: 40px;
+  border-radius: 10px;
+  font-size: 28px;
+  border: 2px solid #c2af91;
+  text-align: center;
+  position: relative;
+}
+.poll-box .question-box .question-text{
+  font-size: 30px;
+  font-family: 'Concert One', cursive;
+  color: #665b49;
+}
+.poll-box .option-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.options:hover
+{
+  transform: scale(1.1);
+  background: #ff8b00;
+}
+.poll-box .option-box .options{
+  /* background: #ffffff; */
+  flex-basis: calc(50% - 20px);
+  max-width: calc(50% - 20px); 
+  margin-top: 30px;
+  padding: 14px 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #796746;
+  border: 2px solid #b96502;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+.poll-box .do-vote{
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* css for chart box */
+.chart-box{
+  max-width: 500px;
+  background-color: #eaebb7;
+  margin-right: 30px; 
+  margin-top: -590px;
+  padding: 50px 40px;
+  border-radius: 10px;
+  float: right;
+}
+.chart-text{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Concert One', cursive;
+  color: #665b49;
+  padding-top: 0px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <title>My Voting App</title>
+</head>
+<body>
+  <div>
+            <div class="chart">
+                <canvas id="mypollingChart" width="400" height="400"></canvas>
+            </div>
+  </div>
+</body>
+<script>
+    let mpChart = document.getElementById('mypollingChart').getContext('2d');
+    let label = "{{votelabel}}";
+    console.log(label);
+    label = label.split(',');
+    let ds = "{{votecount}}";
+    console.log(ds);
+    let mypollingChart = new Chart(mpChart,{
+        type:'doughnut',
+        data: {
+            labels: label,
+            datasets: [{
+                data:[{{votecount}}],
+                backgroundColor: [
+                    'rgba(39, 44, 145, 1)',
+                    'rgba(170, 42, 14, 1)',
+                    'rgba(173, 11, 151, 1)',
+                    'rgba(64, 110, 7, 1)',
+                    'rgba(7, 95, 110, 1)',
+                    'rgba(80, 74, 37, 1)',
+                ],
+
+            }],
+        },      options:{    responsive: true,
+                             maintainAspectRatio: false,
+                        }
+    });
+</script>
+</html>
+
+{{chartOption}}
+{{chartCount}}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Voting App</title>
+</head>
+<body>
+  <div id="poll">
+
+    <div class="w3-center">
+    
+    <form action="/createPoll" method="post">                 <!-- '/' means we want to submit our form in routes directory -->
+        <h4>Create your own poll</h4>
+
+        <div class="form-group">
+            <label for="question">Your Question:</label>
+            <input value="{{Question}}" name="Question" type="text" class="form-control" id="usr">
+        </div>
+         <input value="{{id}}" name="id" type="hidden" class="form-control">
+        <div class="form-group">
+            <label for="options">Options(seperated by comma):</label>
+            <textarea value="{{Options}}" name="Options" class="form-control" rows="5" id="comment"></textarea>
+        </div>
+
+
+        <div>
+            <button class="w3-button w3-black w3-padding-medium w3-medium w3-margin-top">Create Poll</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+  
+</body>
+</html>
